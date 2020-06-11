@@ -30,6 +30,7 @@ ID [a-zA-Z][a-zA-Z0-9_]*
 "mesh" {return MESH;}
 "texture" {return TEXTURE;}
 "cylinder" {return CYLINDER;}
+"cone" {return CONE;}
 
 "set" {return SET;}
 "move" {return MOVE;}

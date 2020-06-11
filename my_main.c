@@ -467,6 +467,27 @@ void my_main() {
           tmp->lastcol = 0;
           reflect = &white;
           break;
+        case CONE:
+          if (op[i].op.cone.constants != NULL) {
+            //printf("\tconstants: %s",op[i].op.torus.constants->name);
+            reflect = lookup_symbol(op[i].op.cone.constants->name)->s.c;
+          }
+          if (op[i].op.cone.cs != NULL) {
+            //printf("\tcs: %s",op[i].op.torus.cs->name);
+          }
+          add_cone(tmp,
+                    op[i].op.cone.d[0],
+                    op[i].op.cone.d[1],
+                    op[i].op.cone.d[2],
+                    op[i].op.cone.r,
+                    op[i].op.cone.h,
+                    step_3d);
+          matrix_mult( peek(systems), tmp );
+          draw_polygons(tmp, t, zb, view, light, ambient,
+                        reflect);
+          tmp->lastcol = 0;
+          reflect = &white;
+          break;
         }
       //printf("\n");
     } //end operation loop

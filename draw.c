@@ -512,6 +512,47 @@ struct matrix * generate_cylinder(double cx, double cy, double cz, double r, int
   return points;
 }
 
+void add_cone(struct matrix * edges,
+                  double cx, double cy, double cz,
+                  double r, double h, int step){
+  struct matrix *base = generate_cone(cx,cy,cz,r,step);
+  int i;
+  for(i = 0; i < step; i++){
+    add_polygon(  edges,
+                  base->m[0][i],
+                  base->m[1][i],
+                  base->m[2][i],
+                  cx,
+                  cy,
+                  cz,
+                  base->m[0][(i+1)%step],
+                  base->m[1][(i+1)%step],
+                  base->m[2][(i+1)%step]);
+    add_polygon(   edges,
+                  cx,
+                  cy+h,
+                  cz,
+                  base->m[0][i],
+                  base->m[1][i],
+                  base->m[2][i],
+                  base->m[0][(i+1)%step],
+                  base->m[1][(i+1)%step],
+                  base->m[2][(i+1)%step]);
+  }
+}
+struct matrix * generate_cone(double cx, double cy, double cz, double r, int step){
+  struct matrix *points = new_matrix(4, step * step);
+  int i;
+  double x,z,rot;
+  for (i=0; i<step; i++) {
+    rot = (double)i/step;
+    x = r * cos(2 * M_PI * rot) + cx;
+    z = r * sin(2 * M_PI * rot) + cz;
+
+    add_point(points,x,cy,z);
+  }
+  return points;
+}
 /*======== void add_torus() ==========
   Inputs:   struct matrix * points
             double cx
