@@ -29,6 +29,7 @@ ID [a-zA-Z][a-zA-Z0-9_]*
 "line" {return LINE;}
 "mesh" {return MESH;}
 "texture" {return TEXTURE;}
+"cylinder" {return CYLINDER;}
 
 "set" {return SET;}
 "move" {return MOVE;}

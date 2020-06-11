@@ -54,6 +54,13 @@ struct command
     struct {
       SYMTAB *constants;
       double d[4];
+      double r;
+      double h;
+      SYMTAB *cs;
+    } cylinder;
+    struct {
+      SYMTAB *constants;
+      double d[4];
       double r0,r1;
       SYMTAB *cs;
     } torus;
