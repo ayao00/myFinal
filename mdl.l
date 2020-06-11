@@ -31,6 +31,7 @@ ID [a-zA-Z][a-zA-Z0-9_]*
 "texture" {return TEXTURE;}
 "cylinder" {return CYLINDER;}
 "cone" {return CONE;}
+"pyramid" {return PYRAMID;}
 
 "set" {return SET;}
 "move" {return MOVE;}

@@ -68,6 +68,13 @@ struct command
     struct {
       SYMTAB *constants;
       double d[4];
+      double w;
+      double h;
+      SYMTAB *cs;
+    } pyramid;
+    struct {
+      SYMTAB *constants;
+      double d[4];
       double r0,r1;
       SYMTAB *cs;
     } torus;

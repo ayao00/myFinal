@@ -553,6 +553,24 @@ struct matrix * generate_cone(double cx, double cy, double cz, double r, int ste
   }
   return points;
 }
+
+void add_pyramid(struct matrix * edges,
+                  double vx, double vy, double vz,
+                  double w, double h){
+  double bx1,bz1,bx2,bz2,y;
+  bx1 = vx - (w/2);
+  bx2 = vx + (w/2);
+  bz1 = vz - (w/2);
+  bz2 = vz + (w/2);
+  y = vy - h;
+
+  add_polygon(edges, vx, vy, vz,bx1,y,bz2,bx1,y,bz1);
+  add_polygon(edges, vx, vy, vz,bx1,y,bz1,bx2,y,bz1);
+  add_polygon(edges, vx, vy, vz,bx2,y,bz1,bx2,y,bz2);
+  add_polygon(edges, vx, vy, vz,bx2,y,bz2,bx1,y,bz2);
+  add_polygon(edges, bx1,y,bz2,bx2,y,bz1,bx1,y,bz1);
+  add_polygon(edges, bx1,y,bz2,bx2,y,bz2,bx2,y,bz1);
+}
 /*======== void add_torus() ==========
   Inputs:   struct matrix * points
             double cx

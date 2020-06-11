@@ -37,6 +37,9 @@ void add_cone(struct matrix * edges,
                   double cx, double cy, double cz,
                   double r, double h, int step);
 struct matrix * generate_cone(double cx, double cy, double cz, double r, int step);
+void add_pyramid(struct matrix * edges,
+                  double vx, double vy, double vz,
+                  double w, double h);
 void add_torus( struct matrix * edges,
                 double cx, double cy, double cz,
                 double r1, double r2, int step );

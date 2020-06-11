@@ -55,27 +55,28 @@
      TEXTURE = 271,
      CYLINDER = 272,
      CONE = 273,
-     STRING = 274,
-     SET = 275,
-     MOVE = 276,
-     SCALE = 277,
-     ROTATE = 278,
-     BASENAME = 279,
-     SAVE_KNOBS = 280,
-     TWEEN = 281,
-     FRAMES = 282,
-     VARY = 283,
-     PUSH = 284,
-     POP = 285,
-     SAVE = 286,
-     GENERATE_RAYFILES = 287,
-     SHADING = 288,
-     SHADING_TYPE = 289,
-     SETKNOBS = 290,
-     FOCAL = 291,
-     DISPLAY = 292,
-     WEB = 293,
-     CO = 294
+     PYRAMID = 274,
+     STRING = 275,
+     SET = 276,
+     MOVE = 277,
+     SCALE = 278,
+     ROTATE = 279,
+     BASENAME = 280,
+     SAVE_KNOBS = 281,
+     TWEEN = 282,
+     FRAMES = 283,
+     VARY = 284,
+     PUSH = 285,
+     POP = 286,
+     SAVE = 287,
+     GENERATE_RAYFILES = 288,
+     SHADING = 289,
+     SHADING_TYPE = 290,
+     SETKNOBS = 291,
+     FOCAL = 292,
+     DISPLAY = 293,
+     WEB = 294,
+     CO = 295
    };
 #endif
 /* Tokens.  */
@@ -95,27 +96,28 @@
 #define TEXTURE 271
 #define CYLINDER 272
 #define CONE 273
-#define STRING 274
-#define SET 275
-#define MOVE 276
-#define SCALE 277
-#define ROTATE 278
-#define BASENAME 279
-#define SAVE_KNOBS 280
-#define TWEEN 281
-#define FRAMES 282
-#define VARY 283
-#define PUSH 284
-#define POP 285
-#define SAVE 286
-#define GENERATE_RAYFILES 287
-#define SHADING 288
-#define SHADING_TYPE 289
-#define SETKNOBS 290
-#define FOCAL 291
-#define DISPLAY 292
-#define WEB 293
-#define CO 294
+#define PYRAMID 274
+#define STRING 275
+#define SET 276
+#define MOVE 277
+#define SCALE 278
+#define ROTATE 279
+#define BASENAME 280
+#define SAVE_KNOBS 281
+#define TWEEN 282
+#define FRAMES 283
+#define VARY 284
+#define PUSH 285
+#define POP 286
+#define SAVE 287
+#define GENERATE_RAYFILES 288
+#define SHADING 289
+#define SHADING_TYPE 290
+#define SETKNOBS 291
+#define FOCAL 292
+#define DISPLAY 293
+#define WEB 294
+#define CO 295
 
 
 
@@ -128,7 +130,7 @@ typedef union YYSTYPE
   char string[255];
 }
 /* Line 1529 of yacc.c.  */
-#line 132 "y.tab.h"
+#line 134 "y.tab.h"
 	YYSTYPE;
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
 # define YYSTYPE_IS_DECLARED 1
