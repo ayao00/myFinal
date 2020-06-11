@@ -1,0 +1,8 @@
+constants shiny_purple 0.2 0.3 0.7 0.0 0.0 0.0 0.0 0.3 0.7
+
+move 250 150 0
+rotate x 20
+rotate y -20
+scale 20 20 20
+mesh shiny_purple :al.obj
+display

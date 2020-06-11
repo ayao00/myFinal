@@ -18,6 +18,7 @@ void draw_polygons( struct matrix * polys, screen s, zbuffer zb,
                     double *view, double light[2][3], color ambient,
                     struct constants *reflect);
 
+void add_mesh( struct matrix * polygons, char * filename );
 //advanced shapes
 //3d shapes
 void add_box( struct matrix * edges,

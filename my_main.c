@@ -430,6 +430,22 @@ void my_main() {
           //printf("Display");
           display(t);
           break;
+        case MESH:
+          printf("here1\n");
+          printf("Mesh: filename: %s",op[i].op.mesh.name);
+          if (op[i].op.mesh.constants != NULL)
+            {
+              //printf("\tconstants: %s",op[i].op.mesh.constants->name);
+              reflect = lookup_symbol(op[i].op.mesh.constants->name)->s.c;
+            }
+          printf("here\n");
+          add_mesh(tmp, op[i].op.mesh.name);
+          matrix_mult( peek(systems), tmp );
+          draw_polygons(tmp, t, zb, view, light, ambient,
+                        reflect);
+          tmp->lastcol = 0;
+          reflect = &white;
+          break;
         }
       //printf("\n");
     } //end operation loop
