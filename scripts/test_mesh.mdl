@@ -1,8 +1,9 @@
 constants shiny_purple 0.2 0.3 0.7 0.0 0.0 0.0 0.0 0.3 0.7
 
-move 250 150 0
-rotate x 20
-rotate y -20
+push
+move 400 150 0
 scale 20 20 20
-mesh shiny_purple :al.obj
+rotate z -90
+mesh shiny_purple :shuttle.obj
+pop
 display

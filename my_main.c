@@ -237,9 +237,9 @@ void my_main() {
   reflect = &white;
 
   color g;
-  g.red = 255;
-  g.green = 255;
-  g.blue = 255;
+  g.red = 0;
+  g.green = 0;
+  g.blue = 0;
 
   for (f=0; f < num_frames; f++) {
     systems = new_stack();

@@ -4,5 +4,17 @@ rotate x 20
 rotate y -20
 scale 2 2 2
 pyramid 0 0 0 40 100
-
+pop
+push
+move 100 100 0
+rotate x 20
+rotate y 30
+cone 0 0 0 30 70
+pop
+push
+move 400 400 0
+rotate x 20
+rotate y 40
+cylinder 0 0 0 20 50
+pop
 display

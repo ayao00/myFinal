@@ -1,0 +1,39 @@
+frames 100
+basename final_100
+
+constants silver 0.19225 0.50754 0.508273 0.19225 0.50754 0.508273 0.19225 0.50754 0.508273
+constants brass 0.329412 0.780392 0.992157 0.223529 0.568627 0.941176 0.027451 0.113725 0.807843
+constants orange 0.8 0.8 1 0.2 0.2 1 0.2 0.2 1
+constants blue 0 0 1 0 0 1 1 1 1
+constants brown 0.38 0.38 0.5 0.2 0.2 0.5 .07 .07 .5
+
+push
+move 100 50 0
+rotate z 30
+cone brown 0 0 0 40 90
+move 100 0 0
+rotate z -10
+cylinder brown 0 0 0 10 200
+pop
+push
+move 250 -200 0
+sphere blue 0 0 0 300
+pop
+push
+move 0 200 0
+move 400 0 0 moveright
+rotate y 30
+scale 20 20 20
+mesh brass :al.obj
+pop
+push
+move 400 200 0
+scale 20 20 20
+rotate z -90
+move -50 0 0 upandaway
+mesh :shuttle.obj
+pop
+
+
+vary upandaway 50 99 0 1
+vary moveright 0 99 0 1
